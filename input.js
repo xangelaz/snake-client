@@ -1,7 +1,7 @@
 // Stores the active TCP connection object.
 let connection;
 
-const setupInput = function (conn) {
+const setupInput = function(conn) {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -11,29 +11,29 @@ const setupInput = function (conn) {
   return stdin;
 };
 
-const handleUserInput = function (key) {
+const handleUserInput = function(key) {
   // console.log(`input: ${key}`)
   // \u0003 maps to ctrl+c input
   switch (key) {
-    case "\u0003":
-      process.exit();
-    case "w":
-      connection.write("Move: up");
-      break
-    case "a":
-      connection.write("Move: left");
-      break
-    case "s":
-      connection.write("Move: down");
-      break
-    case "d":
-      connection.write("Move: right");
-      break
-    case "h":
-      connection.write("Say: Hello there!");
-      break
-    case "i":
-      console.log("I'm going to win >:)");
+  case "\u0003":
+    process.exit();
+  case "w":
+    connection.write("Move: up");
+    break;
+  case "a":
+    connection.write("Move: left");
+    break;
+  case "s":
+    connection.write("Move: down");
+    break;
+  case "d":
+    connection.write("Move: right");
+    break;
+  case "h":
+    connection.write("Say: Hello there!");
+    break;
+  case "i":
+    console.log("I'm going to win >:)");
   }
 };
 
