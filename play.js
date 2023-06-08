@@ -1,17 +1,23 @@
-const net = require("net");
+#!/usr/bin/env node
 
-// establishes a connection with the game server
-const connect = function () {
-  const conn = net.createConnection({
-    host: '165.227.47.243',
-    port: 50541
-  });
+const { connect } = require("./client");
+const { setupInput } = require("./input");
 
-  // interpret incoming data as text
-  conn.setEncoding("utf8");
+const conn = connect();
+setupInput(conn);
 
-  return conn;
-};
 
 console.log("Connecting ...");
-connect();
+
+
+
+// // code below is from cloning
+// process.stdout.write("\x07");
+
+// const { Game } = require("./src/Game")
+// const { UserInterface } = require("./src/UserInterface")
+// const { RemoteInterface } = require("./src/RemoteInterface")
+// const game = new Game(new UserInterface(), new RemoteInterface())
+
+// // Begin game
+// game.start()
