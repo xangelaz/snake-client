@@ -12,8 +12,7 @@ const setupInput = function(conn) {
 };
 
 const handleUserInput = function(key) {
-  // console.log(`input: ${key}`)
-  // \u0003 maps to ctrl+c input
+
   switch (key) {
   case "\u0003":
     process.exit();
