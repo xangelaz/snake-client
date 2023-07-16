@@ -12,10 +12,7 @@ const setupInput = function(conn) {
 };
 
 const handleUserInput = function(key) {
-
   switch (key) {
-  case "\u0003":
-    process.exit();
   case "w":
     connection.write("Move: up");
     break;
@@ -33,8 +30,11 @@ const handleUserInput = function(key) {
     break;
   case "i":
     console.log("I'm going to win >:)");
+    break;
+  // \u0003 maps to ctrl+c input
+  case "\u0003":
+    process.exit();
   }
 };
-
 
 module.exports = { setupInput };
