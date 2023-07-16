@@ -9,7 +9,7 @@ Before you can run this client, you will need to be running the server side whic
 ## Final Product
 
 !["screenshot_snek_startup"](https://github.com/xangelaz/snake-client/blob/master/docs/snek-startup.png)
-!["screenshot_snek_client console"](https://github.com/xangelaz/snake-client/blob/master/docs/snek-startup.png)
+!["screenshot_snek_client console"](https://github.com/xangelaz/snake-client/blob/master/docs/snek-console.png)
 
 
 ## Getting Started
